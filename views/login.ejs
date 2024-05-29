@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <title>Log in</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" media="all" type="text/css"> 
+    <link href="/css/main.css" rel="stylesheet" media="all" type="text/css">
+</head>
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-t">
+                    <h1 class="title"><b>Login</b></h1>
+                    <form method="POST"  action="/login" >              
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                                <input class="input--style-4" type="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="input-group password">
+                                <label class="label">Password</label>
+                                <input class="input--style-4" type="password" name="password" required>
+                            </div>
+                        </div>          
+                   <!-- Display flash messages -->
+                   <% if (messages && messages.length > 0) { %>
+                    <div style="color: red;">
+                      <%= messages[0] %>
+                    </div>
+                  <% } %>
+                        <div class="p-t-20">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" >Log In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
